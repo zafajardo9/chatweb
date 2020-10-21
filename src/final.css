@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
+:root {
+  --main-header: #8675a9;
+  --second-header: #c3aed6;
+  --btn-main: #ffd5cd;
+  --btn-second: #efbbcf;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fff;
+    font-family: 'Dosis', sans-serif;
+}
+
+header {
+    color: #fff;
+    width: 100%;
+    background-color: var(--main-header);
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* SIGNIN */
+.sign-in {
+    color: #ffffff;
+    background: rgb(255, 106, 106);
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+.sign-in:hover {
+    background: rgb(106, 255, 126);
+    transition: 0.3s ease-in;
+    transition-duration: 1s;
+}
+/* SignOUT */
+.sign-out {
+    background-color: var(--btn-main); 
+    border: none;
+    color: var(--main-header);
+    padding: 15px 32px;
+    text-decoration: none;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+/* Submit */
+/* Input */
+form {
+    width: 100%;
+    background-color: #c3aed6;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+}
+form input {
+    width: 100%;
+    font: 4rem;
+    border: none;
+    background-color: var(--second-header);
+    padding: 20px 10px;
+    color: rgb(32, 30, 30);
+}
+.form-btn {
+    width: 20%;
+    background-color: var(--main-header);
+    color: #fff;
+    font-size: 1.3rem;
+}
+.form-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+/* FOR CHATS OVERFLOW */
+main {
+    margin-top: 10vh;
+    overflow-y: scroll;
+    width: 100%;
+    height: 90%;
+}
+main::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  
+  main::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  
+  main::-webkit-scrollbar-thumb {
+    background: #6649b8;
+  }
+
+/* LOOOL */
+
+ul, li {
+    text-align: left;
+    list-style: none;
+  }
+  
+  p {
+    max-width: 500px;
+    margin-bottom: 12px;
+    line-height: 24px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    position: relative;
+    color: white;
+    text-align: center;
+  }
+  
+  .message {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .sent {
+    flex-direction: row-reverse;
+  }
+  
+  .sent p {
+    color: white;
+    background: var(--main-header);
+    align-self: flex-end;
+  }
+  .received p {
+    background: #e5e5ea;
+    color: black;
+  }
+  
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 2px 5px;
+  }
+
+/* Other things for  */
+@media only screen and (max-width: 600px) {
+    header {
+        font-size: 13px;
+    }
+    form {
+        justify-content: center;
+        align-items: center;
+    }
+    .form-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+}
